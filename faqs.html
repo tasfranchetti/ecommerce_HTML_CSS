@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrafalario</title>
+    <!--FAVICON-->
+    <link rel="website icon" href="img/favicon.ico">
+    <!--Link a hoja de estilos-->
+    <link rel="stylesheet" href="estilos.css">
+    <!--Tipografia-->
+        <!--Roboto condensed-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">    
+    <!--Social meadia-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+</head>
+<body class="bodygrid">
+    <div class="topnav">
+        <img class="active1" src="img/navbarlogo.jpg" alt="Logo ESTRAFALARIO">
+        <div id="myLinks">
+          <a href="index.html">Home</a>
+          <a href="productos.html">Productos</a>
+          <a href="empresa.html">Empresa</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="#about">Carrito</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars i"></i>
+        </a>
+    </div>
+          
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+         x.style.display = "block";
+    }
+    }
+    </script>
+    <header class="headerFlex">
+        <!--Logo-->
+        <span>
+            <img class="imgnav" src="img/navbarlogo.jpg" alt="Logo ESTRAFALARIO">
+        </span>
+        <!--Nav Bar-->
+        <nav>
+            <ul class="ulFlex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a class="activenav" href="faqs.html">FAQs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!--Carrito-->
+        <span>
+            <img class="imgnav" src="img/iconcompra.jpg" alt="Carrito">
+        </span>
+    </header>
+    <main>
+        <div class="titulo">
+            <h2>PREGUNTAS FRECUENTES</h2>
+        </div>
+        <!--Accordion-->
+        <button class="accordion">Cómo comprar?</button>
+            <div class="panel">
+                <div class="textfaqs">
+                    <p>Navega a la seccion de compras utilizando el botón Comprar. Una vez allí, selecciona la cantidad de producto deseado y haz click en el boton de Comprar para agregarlo al carrito de compras.</p>
+                </div>
+                <div class="textfaqs">
+                    <p>Completado este proceso, podrás ingresar al carrito haciendo click en el ícono correspodiente, en la barra superior. Haz click en Finalizar compra y continua los pasos para completar el pago.</p>
+                </div>
+            </div>
+            
+        <button class="accordion">Puedo cambiar el producto?</button>
+            <div class="panel">
+                <div class="textfaqs">
+                    <p>Podrás solicitar los cambios en la seccion de Contacto.</p>
+                </div>
+                <div class="textfaqs">
+                    <p>Podras realizar cambios dentro de los 10 dias habiles a partir de la recepción del envío. El mismo debe encontrarse
+                        en perfecto estado y no haber sido abierto.</p>
+                </div>
+            </div>
+            
+        <button class="accordion">Deseo cambiar la dirección de envío. Es posible?</button>
+            <div class="panel">
+                <div class="textfaqs">
+                    <p>Las compras se despachan 24hs luego de emitida la confirmacion de compra. Si no hemos realizado el despacho es posible que podamos modificar el domicilio. Escribinos utilizando la sección de contacto</p>
+                </div>
+            </div>
+
+        <button class="accordion">Que debo saber sobre el café?</button>
+            <div class="panel">
+                <div class="textfaqs">
+                    <p>Nuestras variedades son de especialidad, todas por encima de los 80 puntos. Contamos con dos lineas:</p>
+                </div>
+                <div class="textfaqs textfaqsbullet">
+                    <p> <span class="spanbold"> Premium: </span>Los blends clásicos de la mas alta calidad, oriundos de Brasil, Colombia, Guatemala Ecuador y Kenia.</p>
+                </div>
+                <div class="textfaqs textfaqsbullet">
+                    <p> <span class="spanbold"> Limitados: </span>Disfrutamos mucho de experimentar y estamos siempre ofreciendo cosas nuevas lo cual le da nacimiento a esta categoria de cafes limitados, pero muy especiales.</p>
+                </div>
+                <div class="textfaqs">
+                    <p>Trabajamos con productos 100% orgánicos y empaques totalmente reciclables. </p>
+                </div>
+            </div>
+        <!--Javascript-->
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>   
+            
+    </main>
+    <footer class="footerflex">
+        <!--Redes sociales y datos de la empresa-->
+        <div class="redesflex">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="" class="fa fa-instagram"></a>
+        </div>
+        <!--Disclaimer-->
+        <p class="copyright">© Copyright ESTRAFALARIO - 2022. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

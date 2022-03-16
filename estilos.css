@@ -1,0 +1,546 @@
+
+/* Llamadas a las fuentes:
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* Reset de propiedades */
+*{ 
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Propiedades geenrales*/
+body {
+    height: 100vh;
+}
+header {
+    height: 59px;
+    background: rgb(0, 0, 0);
+}
+ul {
+    list-style: none;
+}
+ul li {
+    padding: 20px 40px;
+}
+a {
+    color: rgb(245, 245, 245);
+}
+h2{
+    font-size: xx-large;
+    text-align: center;  
+}
+h3 {
+    margin: 20px 0;
+    font-size: x-large;
+}
+p{
+    color: rgb(82, 82, 82);
+    margin: 20px 0;
+    font-size: 15px;
+    line-height: 25px;  
+}
+    /*Propiedades Index*/
+        .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("img/imgbg.jpg");
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(255, 255, 255);
+    }
+    .herop {
+        color: rgb(255, 255, 255);
+    }
+    .hero-text button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 10px 25px;
+        color: rgb(0, 0, 0);
+        background-color: rgb(221, 221, 221);
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .hero-text button:hover {
+        background-color: rgb(85, 85, 85);
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+    /* Slideshow container */
+    .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    }  
+   /* Botones next & previous*/
+   .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(224, 212, 226);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }  
+     /*Posicion de next a la derecha*/
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }  
+     /*Efecto hover*/
+    .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    }  
+    /*Caption texto*/
+    .text {
+    color: rgb(242, 242, 242);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    }  
+    /*Caption numero*/
+    .numbertext {
+    color: rgb(192, 192, 192);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 100%;
+    }  
+    /*Indicadores*/
+    .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(156, 123, 167);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+    .activedot {
+        background-color: rgb(193, 174, 199);
+    }
+    .activedot, .dot:hover {
+    background-color: rgb(71, 23, 88);
+    }  
+    /*Fading*/
+    .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }  
+    @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }  
+    @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }  
+    /* Media query para pequeños dispositivos*/
+    @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+    }
+
+    /*Propiedades navbar*/
+    .imgnav {
+        height: 59px;
+    }    
+    a:hover {
+        color: rgb(175, 166, 216);
+    }
+    a:active {
+        color: rgb(105, 88, 182);
+    }
+    .activenav {
+        color: rgb(164, 148, 235);
+    }
+
+    /*Propiedades Productos*/
+    .containerimg {
+        position: relative;
+        width: 50%;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 20px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgb(182, 182, 182);
+    }
+    .image {
+        display: block;
+        width: 100%;
+    }
+    .overlay {
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: rgb(241, 241, 241); 
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .containerimg:hover .overlay {
+        opacity: 2;
+    }
+
+    .captionleft {
+        color: rgb(255, 255, 255);
+        text-align: left;
+    }
+    .captionright {
+        color: rgb(255, 255, 255);
+        font-weight: 200;
+        text-align: right;
+    }
+
+    /*Propiedades Empresa*/
+    .img {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+    }
+
+    /*Propiedades FAQs*/
+    .titulo {
+        margin: 50px;
+    }
+    .accordion {
+        background-color: rgb(255, 255, 255);
+        color: rgb(68, 68, 68);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+    .active, .accordion:hover {
+        background-color: rgb(204, 204, 204);
+    }  
+    .accordion:after {
+        content: '\002B';
+        color: rgb(146, 146, 146);
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2212";
+    }  
+    .panel {
+        padding: 0 18px;
+        background-color: rgb(255, 255, 255);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin: 20px;
+    }
+    .textfaqs {
+        color: rgb(82, 82, 82);
+        margin: 20px;
+        font-size: 15px;
+        line-height: 25px;        
+    }
+    .textfaqsbullet {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        margin-left: 35px;
+        font-weight:300;
+    }
+    .spanbold {
+        font-weight: normal;
+    }
+    
+    /*Propiedades Contacto*/
+    .formName {
+        width: 80%;
+        padding: 15px 0;
+        margin: auto;
+    }
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 4px;
+        resize: vertical;
+    }
+    input[type=email], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 4px;
+        resize: vertical;
+    }
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+    input[type=submit] {
+        background-color: rgb(154, 14, 209);
+        color: rgb(255, 255, 255);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+    input[type=submit]:hover {
+        background-color: rgb(168, 96, 197);
+    }
+    select {
+        margin-top: 15px;
+    }
+    .containerform {
+        border-radius: 5px;
+        background-image: linear-gradient(rgb(248, 248, 248), rgb(230, 230, 230));
+        padding: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .col-20 {
+        float: left;
+        width: 20%;
+        margin-top: 6px;
+    }
+    .col-80 {
+        float: left;
+        width: 80%;
+        margin-top: 6px;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /*Propiedades footer*/
+    .fa {
+        padding: 10px 5px;
+        font-size: 30px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        margin: 25px 5px ;
+    }
+    .fa:hover {
+        opacity: 0.7;
+    }
+        /* Facebook */
+        .fa-facebook {
+        background: rgb(59, 89, 152);
+        color: rgb(255, 255, 255);
+        }
+        /* Instagram */
+        .fa-instagram {
+        background: rgb(167, 36, 108);
+        color: rgb(255, 255, 255);
+        }
+        /* Twitter */
+        .fa-twitter {
+        background: rgb(85, 172, 238);
+        color: rgb(255, 255, 255);
+        }
+        .copyright{
+            text-align: right;
+            font-size: 13px;
+        }
+
+/*Flex Box*/
+.headerFlex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.ulFlex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.imagenesFlex {
+     display: flex; 
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     margin: auto;
+     width: 80%;
+}
+
+.footerflex{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 80px;
+}
+
+.redesflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*Grid por areas no requerido ya que el sitio es en una columna*/
+
+/*Media queries*/
+
+@media screen and (min-width: 1025px) {
+    .topnav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .headerFlex {
+        display: none;
+    }        
+    .ulFlex {
+        display: none;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: black;
+        position: relative;
+    }      
+    .topnav #myLinks {
+        display: none;
+      }
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }  
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 48px; 
+    }
+    .topnav a:hover {
+        background-color: black;
+        color: white;
+    }  
+    .active1 {
+        background-color: black;
+        height: 48px;
+    }
+    .i {
+        margin: 0px ;
+        padding: 3px 3px;
+    }
+    .imgnav2{
+        height: 30px;
+    }
+    }    
+
+@media screen and (max-width: 480px) {
+    .headerFlex {
+        display: none;
+    }        
+    .ulFlex {
+        display: none;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: black;
+        position: relative;
+    }      
+    .topnav #myLinks {
+        display: none;
+      }
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }  
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 48px; 
+    }
+    .topnav a:hover {
+        background-color: black;
+        color: white;
+    }  
+    .active1 {
+        background-color: black;
+        height: 48px;
+    }
+    .i {
+        margin: 0px ;
+        padding: 3px 3px;
+    }
+    .imgnav2{
+        height: 30px;
+    }
+    .col-20 {
+        float: left;
+        width: 30%;
+        margin-top: 6px;
+    }
+    .col-80 {
+        float: left;
+        width: 70%;
+        margin-top: 6px;
+    }
+    .overlay {
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: rgb(241, 241, 241); 
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        padding: 8px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .p{
+        font-size: 11px;
+        margin: 0;
+    } 
+}
+

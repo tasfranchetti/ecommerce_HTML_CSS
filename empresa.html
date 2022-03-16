@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrafalario</title>
+    <!--FAVICON-->
+    <link rel="website icon" href="img/favicon.ico">
+    <!--Link a hoja de estilos-->
+    <link rel="stylesheet" href="estilos.css">
+    <!--Tipografia-->
+        <!--Roboto condensed-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">    
+        <!--Social meadia-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+</head>
+<body class="bodygrid">
+    <div class="topnav">
+        <img class="active1" src="img/navbarlogo.jpg" alt="Logo ESTRAFALARIO">
+        <div id="myLinks">
+          <a href="index.html">Home</a>
+          <a href="productos.html">Productos</a>
+          <a href="empresa.html">Empresa</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="#about">Carrito</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars i"></i>
+        </a>
+    </div>
+          
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+         x.style.display = "block";
+    }
+    }
+    </script>
+    <header class="headerFlex">
+        <!--Logo-->
+        <span>
+            <img class="imgnav" src="img/navbarlogo.jpg" alt="Logo ESTRAFALARIO">
+        </span>
+        <!--Nav Bar-->
+        <nav>
+            <ul class="ulFlex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a class="activenav" href="empresa.html">Empresa</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!--Carrito-->
+        <span>
+            <img class="imgnav" src="img/iconcompra.jpg" alt="Carrito">
+        </span>
+    </header>
+    <main>
+        <div class="formName">
+            <h3>SOBRE NOSOTROS</h3>
+        </div>
+        <div class="formName">
+            <p>ESTRAFALARIO nace como un Coffee Shop focalizado en vender café gourmet para consumidores minoristas. Utilizamos perfiles de tueste que garantizan las características de un producto optimo y logran estandarizar la calidad en cada grano.</p>
+            <p>Estamos convencidos que la evolución del consumo de café de alta calidad se encuentra en manos de las personas que todos los días eligen aprender un poco mas de esta bebida tan simple como compleja.</p>
+        </div>
+        <div class="imagenesFlex">
+            <div>
+                <img class="img" src="img/vaso.jpg" alt="vaso de cafe">               
+            </div>
+            <div>
+                <img class="img" src="img/mesa.jpg" alt="granos de cafe">
+            </div>
+            <div>
+                <img class="img" src="img/taza.jpg" alt="taza de cafe">
+            </div>      
+        </div>
+    </main>
+    <footer class="footerflex">
+        <!--Redes sociales y datos de la empresa-->
+        <div class="redesflex">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="" class="fa fa-instagram"></a>
+        </div>
+        <!--Disclaimer-->
+        <p class="copyright">© Copyright ESTRAFALARIO - 2022. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
