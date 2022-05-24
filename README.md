@@ -7,7 +7,7 @@
 The features:
 - Static website
 - Plain CSS
-- Bootstrap js fucntionalities for carrousel and dropdown menu
+- Bootstrap js functionalities for carrousel and dropdown menu
 
 ```
 
